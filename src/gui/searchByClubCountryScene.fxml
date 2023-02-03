@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="300.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.searchByClubCountrySceneController">
+    <children>
+        <TextField fx:id="countryField" layoutX="158.0" layoutY="23.0" prefHeight="25.0" prefWidth="310.0" />
+        <Text layoutX="64.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Country">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Text>
+        <Button layoutX="542.0" layoutY="23.0" mnemonicParsing="false" onAction="#searchButton" prefHeight="25.0" prefWidth="53.0" text="Search" />
+        <Label fx:id="countryLabel" layoutX="158.0" layoutY="57.0" text="Label" />
+        <TableView fx:id="playerTable" layoutX="16.0" layoutY="111.0" prefHeight="175.0" prefWidth="620.0">
+            <columns>
+                <TableColumn fx:id="nameCol" prefWidth="98.0" text="Name" />
+                <TableColumn fx:id="countryCol" prefWidth="52.0" text="Country" />
+                <TableColumn fx:id="ageCol" prefWidth="64.0" text="Age (yrs)" />
+                <TableColumn fx:id="heightCol" prefWidth="67.0" text="Height (m)" />
+                <TableColumn fx:id="clubCol" prefWidth="110.0" text="Club" />
+                <TableColumn fx:id="positionCol" prefWidth="69.0" text="Position" />
+                <TableColumn fx:id="numberCol" prefWidth="67.0" text="Number" />
+                <TableColumn fx:id="weeklySalaryCol" prefWidth="92.0" text="Weekly Salary" />
+            </columns>
+        </TableView>
+        <Label fx:id="notFoundLabel" layoutX="178.0" layoutY="82.0" prefHeight="20.0" prefWidth="298.0" text="not found">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

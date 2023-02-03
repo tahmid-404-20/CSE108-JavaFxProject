@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.clubSearchScreenController">
+    <children>
+        <VBox alignment="CENTER" prefHeight="50.0" prefWidth="650.0">
+         <children>
+            <Label fx:id="titleLabel" text="Label">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+        </VBox>
+        <AnchorPane layoutY="134.0" prefHeight="266.0" prefWidth="650.0">
+            <children>
+                <Label fx:id="yearlySalary" layoutX="47.0" layoutY="213.0" text="Salary">
+               <font>
+                  <Font size="19.0" />
+               </font></Label>
+                <TableView fx:id="playerTable" layoutX="23.0" layoutY="24.0" prefHeight="175.0" prefWidth="620.0">
+                    <columns>
+                        <TableColumn fx:id="nameCol" prefWidth="98.0" text="Name" />
+                        <TableColumn fx:id="countryCol" prefWidth="59.0" text="Country" />
+                        <TableColumn fx:id="ageCol" prefWidth="57.0" text="Age (yrs)" />
+                        <TableColumn fx:id="heightCol" prefWidth="67.0" text="Height (m)" />
+                        <TableColumn fx:id="clubCol" prefWidth="110.0" text="Club" />
+                        <TableColumn fx:id="positionCol" prefWidth="69.0" text="Position" />
+                        <TableColumn fx:id="numberCol" prefWidth="67.0" text="Number" />
+                        <TableColumn fx:id="weeklySalaryCol" prefWidth="92.0" text="Weekly Salary" />
+                    </columns>
+                </TableView>
+            </children>
+        </AnchorPane>
+        <HBox layoutY="69.0" prefHeight="50.0" prefWidth="650.0" spacing="25.0">
+            <children>
+                <VBox prefHeight="200.0" prefWidth="265.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#maxSalaryButton" prefHeight="25.0" prefWidth="265.0" text="Player(s) with Maximum Salary" />
+                        <Button mnemonicParsing="false" onAction="#maxHeightButton" prefHeight="25.0" prefWidth="265.0" text="Players(s) with Maximum Height" />
+                    </children>
+                </VBox>
+                <VBox prefHeight="200.0" prefWidth="264.0">
+                    <children>
+                        <Button mnemonicParsing="false" onAction="#maxAgeButton" prefHeight="25.0" prefWidth="265.0" text="Players(s) with Maximum Age" />
+                        <Button mnemonicParsing="false" onAction="#totalYearlySalaryButton" prefHeight="25.0" prefWidth="265.0" text="Total Yearly Salary" />
+                    </children>
+                </VBox>
+            </children>
+            <padding>
+                <Insets left="50.0" />
+            </padding>
+        </HBox>
+    </children>
+</AnchorPane>

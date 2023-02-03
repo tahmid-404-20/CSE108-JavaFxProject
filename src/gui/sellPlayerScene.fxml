@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="270.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.sellPlayerSceneController">
+    <children>
+        <TableView fx:id="playerTable" layoutX="15.0" layoutY="81.0" prefHeight="143.0" prefWidth="620.0">
+            <columns>
+                <TableColumn fx:id="nameCol" prefWidth="98.0" text="Name" />
+                <TableColumn fx:id="countryCol" prefWidth="52.0" text="Country" />
+                <TableColumn fx:id="ageCol" prefWidth="64.0" text="Age (yrs)" />
+                <TableColumn fx:id="heightCol" prefWidth="67.0" text="Height (m)" />
+                <TableColumn fx:id="clubCol" prefWidth="110.0" text="Club" />
+                <TableColumn fx:id="positionCol" prefWidth="69.0" text="Position" />
+                <TableColumn fx:id="numberCol" prefWidth="67.0" text="Number" />
+                <TableColumn fx:id="weeklySalaryCol" prefWidth="92.0" text="Weekly Salary" />
+            </columns>
+        </TableView>
+        <TextField fx:id="priceField" layoutX="188.0" layoutY="23.0" prefHeight="25.0" prefWidth="189.0" />
+        <Text layoutX="90.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price (in M$)">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Button layoutX="78.0" layoutY="230.0" mnemonicParsing="false" onAction="#sellButton" prefHeight="0.0" prefWidth="40.0" text="Sell" />
+        <Label fx:id="errorLabel" layoutX="383.0" layoutY="27.0" text="Label" />
+        <Text layoutX="199.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select a player, put the price and click Sell!">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Text>
+      <Text layoutX="267.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Players">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+    </children>
+</AnchorPane>
